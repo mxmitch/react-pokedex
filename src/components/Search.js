@@ -16,7 +16,6 @@ const Search = (props) => {
       <FormControl
         type="text"
         placeholder="Search"
-        style={{ width: "90%", marginRight: "8px" }}
         value={value}
         onChange={(event) => setValue(event.target.value)}
       />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Search from "./components/Search";
+import PokemonCard from "./components/PokemonCard";
 import Container from "react-bootstrap/Container";
 import "./App.scss";
 import axios from "axios";
@@ -25,7 +26,7 @@ function App() {
       <Header />
       <Container fluid>
         <Search handleSubmit={handleSubmit} />
-        {results.name}
+        <PokemonCard data={results} />
       </Container>
     </div>
   );

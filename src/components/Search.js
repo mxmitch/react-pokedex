@@ -12,14 +12,15 @@ const Search = (props) => {
   };
 
   return (
-    <Form inline onSubmit={onSearch}>
+    <Form inline onSubmit={onSearch} className="margin-bottom">
       <FormControl
         type="text"
         placeholder="Search"
         value={value}
         onChange={(event) => setValue(event.target.value)}
+        style={{ display: "inline", marginBottom: "16px", marginRight: "16px" }}
       />
-      <Button variant="outline-success" type="submit">
+      <Button variant="outline-success" type="submit" className="margin-bottom">
         Search
       </Button>
     </Form>

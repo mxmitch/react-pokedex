@@ -6,8 +6,13 @@ import Button from "react-bootstrap/Button";
 const Search = (props) => {
   const [value, setValue] = useState("");
 
+  const onSearch = (event) => {
+    event.preventDefault();
+    props.handleSubmit(value);
+  };
+
   return (
-    <Form inline onSubmit={props.handleSubmit(value)}>
+    <Form inline onSubmit={onSearch}>
       <FormControl
         type="text"
         placeholder="Search"

@@ -12,7 +12,8 @@ function App() {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${val}`)
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
+        setResults(res.data);
       })
       .catch((err) => {
         console.log(err);

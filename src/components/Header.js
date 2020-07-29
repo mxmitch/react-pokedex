@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 const Header = () => {
   return (
-    <Navbar className="header" fixed="top" expand="lg">
+    <Navbar className="header" expand="lg">
       <Navbar.Brand style={{ color: "#FFF" }}>React Pokedex</Navbar.Brand>
     </Navbar>
   );

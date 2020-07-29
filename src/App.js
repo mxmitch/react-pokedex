@@ -3,13 +3,12 @@ import Header from "./components/Header";
 import Search from "./components/Search";
 import PokemonCard from "./components/PokemonCard";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import "./App.scss";
 import axios from "axios";
 
 function App() {
   const [image, setImage] = useState("");
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Pokemon");
   const [id, setId] = useState("");
 
   const handleSubmit = (val) => {
@@ -30,12 +29,8 @@ function App() {
     <div>
       <Header />
       <Container>
-        <Row style={{ justifyContent: "center" }}>
-          <Search handleSubmit={handleSubmit} />
-        </Row>
-        <Row style={{ justifyContent: "center" }}>
-          <PokemonCard key={id} image={image} name={name} id={id} />
-        </Row>
+        <Search handleSubmit={handleSubmit} />
+        <PokemonCard key={id} image={image} name={name} id={id} />
       </Container>
     </div>
   );
